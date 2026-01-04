@@ -3,69 +3,78 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sonderhaus · What’s on</title>
+  <title>Sonderhaus · Collaborate</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <div class="wrap">
-    <div class="holes" aria-hidden="true">
-      <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
-      <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
-    </div>
+  <div class="wrap stack">
+    <div class="clip" aria-hidden="true"></div>
 
-    <main class="ticket">
+    <main class="sheet">
       <div class="top">
-        <div>
-          <h1 class="title">Sonderhaus</h1>
-          <p class="subtitle">A place to wonder</p>
+        <div class="brand">
+          <h1 class="brandName">Sonderhaus</h1>
+          <p class="brandTag">A place to wonder</p>
         </div>
-        <div class="page">Room</div>
+        <div class="roomLabel">Room</div>
       </div>
 
       <div class="rule"></div>
 
       <div class="grid">
         <section>
-          <h2 class="roomTitle">Brands, venues, artists. Build something human with us</h2>
-          <p class="roomText">
-            A small noticeboard of upcoming gatherings. Keep it minimal. Keep it alive.
+          <h2 class="roomTitle">Collaborate</h2>
+          <p class="roomIntro">
+            Brands, venues, artists, communities. Build something human.
           </p>
 
-          <p class="small">
-            Next update: add three events with date, mood, and link.
+          <p class="roomBody">
+            Sonderhaus collaborations are built on alignment.
+            If you care about community, creativity, and calm experiences, we can build something that feels real.
           </p>
+
+          <ul class="bullets">
+            <li>Event partnerships and hosted rooms</li>
+            <li>Brand support that feels natural, not salesy</li>
+            <li>Content that documents atmosphere, not ads</li>
+          </ul>
+
+          <form class="form" id="collabForm">
+            <div>
+              <div class="label">Name</div>
+              <input class="input" id="name" placeholder="Your name" />
+            </div>
+            <div>
+              <div class="label">Message</div>
+              <textarea class="area" id="message" placeholder="What do you want to build together"></textarea>
+            </div>
+            <button class="btn" type="submit">Send</button>
+            <div class="note">This opens your email app. No data stored here.</div>
+          </form>
 
           <div class="rule"></div>
-
-          <div class="keywords">
-            <a class="kw" href="index.html">Back to foyer</a>
+          <div class="links">
+            <a class="kw" href="gallery.html">Gallery room</a><br>
+            <a class="kw" href="index.html">Back to main room</a>
           </div>
         </section>
 
         <aside class="meta">
-          Doors<br>
-          Film<br>
-          Art<br>
-          Play
+          Intentional<br>
+          Calm energy<br>
+          Community<br>
+          Culture
         </aside>
       </div>
 
-      <div class="rule"></div>
-
-      <div class="keywords">
-        <a class="kw" href="whatson.html">What’s on</a>
-        <span> </span>
-        <a class="kw" href="film.html">Film</a>
-        <span> </span>
-        <a class="kw" href="art.html">Art</a>
-        <span> </span>
-        <a class="kw" href="mariokart.html">Mario kart</a>
-      </div>
-
       <div class="footer">
-        <span>Open gently</span>
-        <span>Return when ready</span>
+        <span>Build slowly</span>
+        <span>Build properly</span>
       </div>
     </main>
   </div>
