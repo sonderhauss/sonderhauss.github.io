@@ -213,7 +213,7 @@ function setupCollabForm(){
     const subject = encodeURIComponent("Sonderhaus collaboration");
     const body = encodeURIComponent(`Name: ${name}\n\nMessage:\n${msg}\n\nSent from sonderhaus website`);
 
-    const to = "your@email.com";
+    const to = "sonderhaus3vents@email.com";
     window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     note.textContent = "Opening your email client…";
   });
