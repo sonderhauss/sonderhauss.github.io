@@ -1,1 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sonderhaus · A place to wander</title>
+  <meta name="description" content="Sonderhaus is an evolving cultural venue for community, creativity, and shared presence in London. A place to wander." />
+  <meta property="og:title" content="Sonderhaus · A place to wander" />
+  <meta property="og:description" content="An evolving cultural venue for community, creativity, and shared presence in London." />
+  <meta name="theme-color" content="#0f0f10" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="bgGlow"></div>
+    <div class="bgGrain"></div>
+  </div>
+
+  <header class="header">
+    <a class="brand" href="#top" aria-label="Sonderhaus home">
+      <span class="brandName">Sonderhaus</span>
+      <span class="brandTag">A place to wander</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#whatson">What’s on</a>
+      <a href="#room">The room</a>
+      <a href="#archive">Archive</a>
+      <a href="#community">Community</a>
+      <a href="#collaborate">Collaborate</a>
+    </nav>
+
+    <button class="navBtn" id="navBtn" aria-label="Open menu" aria-expanded="false">Menu</button>
+  </header>
+
+  <main id="top" class="main">
+    <section class="hero">
+      <div class="heroInner">
+        <h1 class="heroTitle">
+          Sonderhaus
+          <span class="heroSubtitle">A place to wander</span>
+        </h1>
+
+        <p class="heroLead">
+          An evolving cultural venue for community, creativity, and shared presence in London.
+        </p>
+
+        <p class="heroWhisper">
+          A space to arrive without urgency. To stay for a while. To return.
+        </p>
+
+        <div class="heroLinks">
+          <a class="softLink" href="#whatson">Wander into what’s on</a>
+          <a class="softLink" href="#room">Step into the room</a>
+          <a class="softLink" href="#archive">Explore the archive</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="whatson" class="section">
+      <div class="sectionHead">
+        <h2 class="sectionTitle">What’s on</h2>
+        <p class="sectionHint">What’s happening soon.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="cardHead">
+            <h3 class="cardTitle">Next gathering</h3>
+            <p class="cardMeta" id="nextEventMeta">Loading</p>
+          </div>
+          <p class="cardBody" id="nextEventBody">Loading</p>
+          <div class="cardActions">
+            <a class="btn" id="nextEventLink" href="#" target="_blank" rel="noreferrer">Open details</a>
+            <button class="btnGhost" id="copyEventBtn" type="button">Copy info</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardHead">
+            <h3 class="cardTitle">Upcoming</h3>
+            <p class="cardMeta">A small noticeboard.</p>
+          </div>
+
+          <div class="list" id="eventList" aria-live="polite"></div>
+
+          <div class="cardActions">
+            <a class="softLink" href="#collaborate">Want to host with us</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardHead">
+            <h3 class="cardTitle">Stay close</h3>
+            <p class="cardMeta">A gentle way to return.</p>
+          </div>
+
+          <p class="cardBody">
+            Occasional updates. New rooms. New invitations.
+          </p>
+
+          <form class="form" onsubmit="return false;">
+            <label class="label" for="email">Email</label>
+            <div class="formRow">
+              <input id="email" class="input" type="email" placeholder="you@example.com" autocomplete="email" />
+              <button class="btn" id="joinBtn" type="button">Join</button>
+            </div>
+            <p class="formNote" id="joinNote">No spam. No noise.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="room" class="section">
+      <div class="sectionHead">
+        <h2 class="sectionTitle">The room</h2>
+        <p class="sectionHint">What’s been happening here lately.</p>
+      </div>
+
+      <div class="gridTwo">
+        <div class="card tall">
+          <div class="cardHead">
+            <h3 class="cardTitle">A living feed</h3>
+            <p class="cardMeta">Quiet moments, kept.</p>
+          </div>
+
+          <div class="roomFeed" id="roomFeed"></div>
+
+          <div class="cardActions">
+            <button class="btnGhost" id="addRoomNoteBtn" type="button">Add a moment</button>
+          </div>
+          <p class="tiny">
+            Tip: replace these moments with your own short lines, photos, or clips.
+          </p>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <div class="cardHead">
+              <h3 class="cardTitle">How it feels</h3>
+              <p class="cardMeta">No performance required.</p>
+            </div>
+            <p class="cardBody">
+              Music low. Conversations unforced. A room that holds you gently.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="cardHead">
+              <h3 class="cardTitle">Your first visit</h3>
+              <p class="cardMeta">Come as you are.</p>
+            </div>
+            <p class="cardBody">
+              You can arrive alone. You can stay quiet. You can wander through it all.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="cardHead">
+              <h3 class="cardTitle">The rhythm</h3>
+              <p class="cardMeta">A venue you return to.</p>
+            </div>
+            <p class="cardBody">
+              Recurring gatherings. Small experiments. New rooms opening slowly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="archive" class="section">
+      <div class="sectionHead">
+        <h2 class="sectionTitle">Archive</h2>
+        <p class="sectionHint">Moments that linger.</p>
+      </div>
+
+      <div class="masonry" id="archiveGrid"></div>
+
+      <div class="sectionFoot">
+        <p class="tiny">
+          Replace these tiles with real images from Film Club, Art Club, Mario Kart, workshops, and kitchen sessions.
+        </p>
+      </div>
+    </section>
+
+    <section id="community" class="section">
+      <div class="sectionHead">
+        <h2 class="sectionTitle">Community</h2>
+        <p class="sectionHint">Held together by people who return.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="cardHead">
+            <h3 class="cardTitle">A way of showing up</h3>
+            <p class="cardMeta">Close, or quietly.</p>
+          </div>
+          <p class="cardBody">
+            Sonderhaus grows by consistency and care. Some people stay near. Some support from the edges.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="cardHead">
+            <h3 class="cardTitle">Membership</h3>
+            <p class="cardMeta">Optional, gentle.</p>
+          </div>
+          <p class="cardBody">
+            Early invitations. Occasional perks. A small way to keep the space open.
+          </p>
+          <div class="cardActions">
+            <a class="btn" href="#collaborate">Ask about membership</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardHead">
+            <h3 class="cardTitle">Bring a friend</h3>
+            <p class="cardMeta">Or come alone.</p>
+          </div>
+          <p class="cardBody">
+            There is no right way to arrive here. Wander at your pace.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="collaborate" class="section">
+      <div class="sectionHead">
+        <h2 class="sectionTitle">Collaborate</h2>
+        <p class="sectionHint">Culture, care, and intentional experiences.</p>
+      </div>
+
+      <div class="gridTwo">
+        <div class="card">
+          <div class="cardHead">
+            <h3 class="cardTitle">Work with Sonderhaus</h3>
+            <p class="cardMeta">Brands, venues, partners.</p>
+          </div>
+          <p class="cardBody">
+            If you want to build something that feels human, we’d like to hear from you.
+          </p>
+
+          <form class="form" id="collabForm">
+            <label class="label" for="name">Name</label>
+            <input id="name" class="input" type="text" placeholder="Your name" />
+
+            <label class="label" for="message">Message</label>
+            <textarea id="message" class="input area" rows="4" placeholder="What do you have in mind"></textarea>
+
+            <button class="btn" type="submit">Send</button>
+            <p class="formNote" id="collabNote">This form opens your email client. No data stored here.</p>
+          </form>
+        </div>
+
+        <div class="card">
+          <div class="cardHead">
+            <h3 class="cardTitle">Audience</h3>
+            <p class="cardMeta">London, culture curious.</p>
+          </div>
+          <ul class="bullets">
+            <li>18 to 32</li>
+            <li>film music art workshops and social spaces</li>
+            <li>community led, calm, intentional</li>
+            <li>content that documents feeling, not hype</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <div class="cardHead">
+            <h3 class="cardTitle">Formats</h3>
+            <p class="cardMeta">Recurring and one off.</p>
+          </div>
+          <ul class="bullets">
+            <li>creative socials</li>
+            <li>screenings and conversations</li>
+            <li>workshops and makers nights</li>
+            <li>DJ led cultural moments</li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p class="footerLine">Sonderhaus · London</p>
+        <p class="footerLine">A place to wander</p>
+      </footer>
+    </section>
+  </main>
+
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawerInner">
+      <a href="#whatson" class="drawerLink">What’s on</a>
+      <a href="#room" class="drawerLink">The room</a>
+      <a href="#archive" class="drawerLink">Archive</a>
+      <a href="#community" class="drawerLink">Community</a>
+      <a href="#collaborate" class="drawerLink">Collaborate</a>
+      <button class="btnGhost drawerClose" id="drawerClose" type="button">Close</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
